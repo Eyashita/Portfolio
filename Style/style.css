@@ -1,0 +1,38 @@
+input[type=message], input[type=email], input[type=name]
+{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical
+}
+
+button[type=submit]
+{
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button[type=submit]:hover
+{
+    background-color: #45a049;
+}
+
+.circle{
+    width: 220px;
+    height:220px;
+    border-radius: 50%;
+    overflow:hidden;
+    }
+    .image{
+     width:100%;
+     float:left;
+     height:100%;
+     }
+     
