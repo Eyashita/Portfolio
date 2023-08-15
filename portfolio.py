@@ -17,18 +17,14 @@ def load_lottiurl(url):
 def local_css(file_name):
  with open(file_name) as f:
   st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-local_css("D:/Personal Portfolio/Style/style.css")
+local_css("./Style/style.css")
 
 lottie_coder = load_lottiurl("https://lottie.host/a9cd8673-69f7-4dba-bac3-2027423521fb/5gAswbWwF4.json")
 smart_mirror = load_lottiurl("https://lottie.host/d302d28d-2e74-44dc-b2a5-1bc613d091a1/avsPpI9Ktn.json")
 girl_waving = load_lottiurl("https://lottie.host/137392ff-4a64-429f-a011-0cc326c5e097/wXPPPXFA0F.json")
-image = Image.open("D:/Personal Portfolio/Images/Smart Mirror.jpg")
-me = Image.open('D:/Personal Portfolio/Images/Eyashita.JPG')
+image = Image.open("./Images/Smart Mirror.jpg")
+me = Image.open('./Images/Eyashita.JPG')
 me = ImageOps.exif_transpose(me)
-linkedIn_icon = Image.open("D:/Personal Portfolio/Images/linkedin_icon.png")
-git_icon = Image.open("D:/Personal Portfolio/Images/github_icon.png")
-youtube_icon = Image.open("D:/Personal Portfolio/Images/youtube_icon.png")
-gmail_icon = Image.open("D:/Personal Portfolio/Images/email_icon.png")
 
 # --- TITLE ---
 st.title("My Portfolio :ledger:")
@@ -140,7 +136,7 @@ linkedin = "https://www.linkedin.com/in/eyashita-singh/"
 git = "https://github.com/Eyashita"
 youtube = "https://www.youtube.com/@thesinghsisters813"
 
-Resume = "D:/Personal Portfolio/Resume.pdf"
+Resume = "./Resume.pdf"
 
 with st.sidebar:
    st.sidebar.header("Connect with me on Social Media!")
