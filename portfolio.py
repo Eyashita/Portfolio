@@ -23,8 +23,13 @@ lottie_coder = load_lottiurl("https://lottie.host/a9cd8673-69f7-4dba-bac3-202742
 smart_mirror = load_lottiurl("https://lottie.host/d302d28d-2e74-44dc-b2a5-1bc613d091a1/avsPpI9Ktn.json")
 girl_waving = load_lottiurl("https://lottie.host/137392ff-4a64-429f-a011-0cc326c5e097/wXPPPXFA0F.json")
 image = Image.open("./Images/Smart Mirror.jpg")
-me = Image.open('./Images/Eyashita.JPG')
+me = ImageOps.exif_transpose(Image.open('./Images/Eyashita.JPG'))
 me = ImageOps.exif_transpose(me)
+sKart = Image.open("./Images/Shpping1.jpg")
+sKart = ImageOps.exif_transpose(sKart)
+dashboard = Image.open("./Images/Smart House.jpg")
+dashboard = ImageOps.exif_transpose(dashboard)
+
 
 # --- TITLE ---
 st.title("My Portfolio :ledger:")
@@ -98,18 +103,60 @@ if selected == 'About':
 if selected == 'Projects':
  with st.container():
   st.header("My Projects")
+  st.write("---")
   st.write("##")
-  col5, col6 = st.columns(2)
+
+  col5, col6 = st.columns([0.3, 0.7])
   with col5:
-   st.image(image)
+   st.image(dashboard, width = 300)
   with col6:
+   st.subheader("IOT enabled Dynamic Dashboard for HouseHold Systems")
+   st.write("""
+            - Developed a Smart Mirror using Raspberry Pi and Python, integrating 10+ technologies. 
+            - Improved morning routines by providing innovative features and easy access to information. 
+            - Enriched the advancement of smart home technology through this project. 
+            """)
+   
+  col7, col8 = st.columns([0.3, 0.7])
+  with col7:
+   st.image(dashboard, width = 300)
+  with col8:
+   st.subheader("Visage: Facial Recognition System for Attendance")
+   st.write("""
+            - Developed a Smart Mirror using Raspberry Pi and Python, integrating 10+ technologies. 
+            - Improved morning routines by providing innovative features and easy access to information. 
+            - Enriched the advancement of smart home technology through this project. 
+            """)
+
+  col1, col2 = st.columns([0.3, 0.7])
+  with col1:
+   image = ImageOps.exif_transpose(image)
+   st.image(image, width= 300)
+   
+  with col2:
    st.subheader("Smart Mirror")
    st.write("""
             - Developed a Smart Mirror using Raspberry Pi and Python, integrating 10+ technologies. 
             - Improved morning routines by providing innovative features and easy access to information. 
             - Enriched the advancement of smart home technology through this project. 
             """)
-   st.markdown("[Visit Github Repo](https://github.com/Eyashita)")
+   
+  col3, col4 = st.columns([0.3, 0.7])
+  with col3:
+   st.image(sKart, width = 300)
+  with col4:
+   st.subheader("IOT enabled Smart ShoppingKart")
+   st.write("""
+            - Developed a Smart Mirror using Raspberry Pi and Python, integrating 10+ technologies. 
+            - Improved morning routines by providing innovative features and easy access to information. 
+            - Enriched the advancement of smart home technology through this project. 
+            """)
+   
+   
+   
+   
+if st.button("Visit My Github"):
+    wb.open_new_tab("https://github.com/Eyashita")
  
 if selected == 'Contact':
  st.header("Get in touch!")
