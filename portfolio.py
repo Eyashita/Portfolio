@@ -20,8 +20,6 @@ def local_css(file_name):
 local_css("./Style/style.css")
 
 lottie_coder = load_lottiurl("https://lottie.host/a9cd8673-69f7-4dba-bac3-2027423521fb/5gAswbWwF4.json")
-smart_mirror = load_lottiurl("https://lottie.host/d302d28d-2e74-44dc-b2a5-1bc613d091a1/avsPpI9Ktn.json")
-girl_waving = load_lottiurl("https://lottie.host/137392ff-4a64-429f-a011-0cc326c5e097/wXPPPXFA0F.json")
 image = Image.open("./Images/Smart Mirror.jpg")
 me = ImageOps.exif_transpose(Image.open('./Images/Eyashita.JPG'))
 me = ImageOps.exif_transpose(me)
@@ -29,11 +27,20 @@ sKart = Image.open("./Images/Shpping1.jpg")
 sKart = ImageOps.exif_transpose(sKart)
 dashboard = Image.open("./Images/Smart House.jpg")
 dashboard = ImageOps.exif_transpose(dashboard)
+linkedin = ImageOps.exif_transpose(Image.open("./Images/linkedin_icon.png"))
+
 
 
 # --- TITLE ---
 st.title("My Portfolio :ledger:")
-st.markdown('<style> div.block-container{padding-top: 1rem;}</style>', unsafe_allow_html = True)
+st.markdown('''
+            <style> 
+            div.block-container
+            {
+               padding-top: 1rem;
+            }
+           </style>'''
+            , unsafe_allow_html = True)
 st.write('---')
 
 with st.container():
@@ -50,33 +57,29 @@ if selected == 'About':
   with col1:
    st.title("I am Eyashita Singh")
    st.subheader("Undergrad at VIT AP")
-   st.write("""
-                I'm a dedicated and passionate individual with a robust computer 
-            science background and a deep fascination for data analytics. I possess 
-            strong programming skills, a knack for problem-solving, and hands-on experience 
-            with data analysis tools. My goal is to leverage technology to drive meaningful 
-            change and innovation. I excel in teamwork, effective communication, and adapting to 
-            fast-paced environments. I'm eager to contribute my skills to your organization, 
-            whether it's through software development, data analysis, or driving data-driven decisions.\n 
-            Let's connect and embark on an innovative journey together! :sparkles:
-                """)
+   st.markdown("""
+    <div style="text-align: justify;">
+        I'm a dedicated and passionate individual with a robust computer 
+        science background and a deep fascination for data analytics. I possess 
+        strong programming skills, a knack for problem-solving, and hands-on experience 
+        with data analysis tools. My goal is to leverage technology to drive meaningful 
+        change and innovation. I excel in teamwork, effective communication, and adapting to 
+        fast-paced environments. I'm eager to contribute my skills to your organization, 
+        whether it's through software development, data analysis, or driving data-driven decisions.
+        Let's connect and embark on an innovative journey together! :sparkles:
+    </div>
+    """, unsafe_allow_html=True)
    
   with col2:
    st_lottie(lottie_coder)
  st.write("---")
-
- with st.expander("See me!"):
-    st.write('''
-        This is Eyashita Singh!
-    ''')
-    st.image(me, width=200)
 
  with st.container():
   col3, col4 = st.columns(2)
   with col3:
    st.subheader("""
             Education :books:
-            - VIT
+            - Vellore Institue of Technology, Andhra Pradesh
                - Bachelor of Engineering - Computer Science with Data Analytics Specialization
                - CGPA: 8.89 (currently)
 
@@ -90,7 +93,7 @@ if selected == 'About':
   with col4:
    st.subheader("""
             Experience :computer:
-            - Do It Yourself (DIY) Club President, VIT-AP
+            - Do It Yourself (DIY) Club President, VIT-AP 
                - Led a team of 10+ in organizing and executing art events, ensuring successful promotion and seamless coordination. 
                - Partnered with more than 4 clubs and organizations to co-host and manage successful events. 
               
@@ -102,15 +105,18 @@ if selected == 'About':
 
 if selected == 'Projects':
  with st.container():
-  st.header("My Projects")
+  col1, col2 = st.columns([0.3, 0.7 ])
+  with col1:
+   st.markdown("<h2 style='text-align: left ; padding-top:70px'>My Projects</h2>", unsafe_allow_html=True)
+   with col2:
+    st.image("https://media.giphy.com/media/5ndklThG9vUUdTmgMn/giphy.gif", width = 150)
   st.write("---")
-  st.write("##")
 
   col5, col6 = st.columns([0.3, 0.7])
   with col5:
    st.image(dashboard, width = 300)
   with col6:
-   st.subheader("IOT enabled Dynamic Dashboard for HouseHold Systems")
+   st.subheader("	:arrow_right: IOT enabled Dynamic Dashboard for HouseHold Systems")
    st.write("""
             - Developed a Smart Mirror using Raspberry Pi and Python, integrating 10+ technologies. 
             - Improved morning routines by providing innovative features and easy access to information. 
@@ -121,7 +127,7 @@ if selected == 'Projects':
   with col7:
    st.image(dashboard, width = 300)
   with col8:
-   st.subheader("Visage: Facial Recognition System for Attendance")
+   st.subheader("	:arrow_right: Visage: Facial Recognition System for Attendance")
    st.write("""
             - Developed a Smart Mirror using Raspberry Pi and Python, integrating 10+ technologies. 
             - Improved morning routines by providing innovative features and easy access to information. 
@@ -134,7 +140,7 @@ if selected == 'Projects':
    st.image(image, width= 300)
    
   with col2:
-   st.subheader("Smart Mirror")
+   st.subheader("	:arrow_right: Smart Mirror")
    st.write("""
             - Developed a Smart Mirror using Raspberry Pi and Python, integrating 10+ technologies. 
             - Improved morning routines by providing innovative features and easy access to information. 
@@ -145,40 +151,39 @@ if selected == 'Projects':
   with col3:
    st.image(sKart, width = 300)
   with col4:
-   st.subheader("IOT enabled Smart ShoppingKart")
+   st.subheader("	:arrow_right: IOT enabled Smart ShoppingKart")
    st.write("""
             - Developed a Smart Mirror using Raspberry Pi and Python, integrating 10+ technologies. 
             - Improved morning routines by providing innovative features and easy access to information. 
             - Enriched the advancement of smart home technology through this project. 
             """)
-   
-   
-   
-   
-if st.button("Visit My Github"):
-    wb.open_new_tab("https://github.com/Eyashita")
  
 if selected == 'Contact':
- st.header("Get in touch!")
- st.write("##")
+ st.markdown("<h2 style='text-align:center;'>Get in Touch!</h2>", unsafe_allow_html=True)
+ st.write("---")
  st.write("##")
 
  contact_form = """
- <form action="https://formsubmit.co/eyashitasingh10@gmail.com" method="POST">
-     <input type="hidden" name="_captcha" value = "false">
-     <input type="text" name="name" placeholder = "Your name" required>
-     <input type="email" name="email" placeholder = "Your email" required>
-     <textarea name = "message" placeholder = "Your message" required></textarea>
-     <button type="submit">Submit</button>
- </form>
+<form style="text-align: center;" action="https://formsubmit.co/eyashitasingh10@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="name" placeholder="Your name" style="width: 100%; padding: 10px; margin-bottom: 10px;" required>
+    <input type="email" name="email" placeholder="Your email" style="width: 100%; padding: 10px; margin-bottom: 10px;" required>
+    <textarea name="message" placeholder="Your message" style="width: 100%; height: 150px; padding: 10px;" required></textarea>
+    <br><button type="submit">Submit</button></br>
+</form>
+
+
+
  """
 
- left_col, right_col = st.columns((2,1))
+ left_col, right_col = st.columns([0.6, 0.4])
  with left_col:
   st.markdown(contact_form, unsafe_allow_html= True)
  with right_col:
-  st_lottie("https://lottie.host/fa1b01ce-41e3-405e-a12d-f648c62ddfdf/FN7FtkSRUq.json")
+  st_lottie("https://lottie.host/825b4e78-a035-4d52-9fcb-4b34a214b80d/428IZ45rIj.json")
 
+
+# --- Sidebar ---
 linkedin = "https://www.linkedin.com/in/eyashita-singh/"
 git = "https://github.com/Eyashita"
 youtube = "https://www.youtube.com/@thesinghsisters813"
@@ -186,25 +191,31 @@ youtube = "https://www.youtube.com/@thesinghsisters813"
 Resume = "./Resume.pdf"
 
 with st.sidebar:
-   st.sidebar.header("Connect with me on Social Media!")
+   # st.sidebar.title("Connect with me on Social Media!")
+   st.markdown("<h1 style='margin-top: 0;padding-top: 0;'>Connect with me on Social Media!</h1>", unsafe_allow_html=True)
    st.write("---")
-   # LinkedIn
-   if st.button("LinkedIn"):
-    wb.open_new_tab(linkedin)
-   # Github
-   if st.button("Github"):
-    wb.open_new_tab(git)
-   # Gmail
-   if st.button("Gmail"):
-    st.write("itsofficial.eyashita10@gmail.com")
-   # Youtube
-   if st.button("Youtube"):
-    wb.open_new_tab(youtube)
-   # Resume
-   if st.download_button(label="Resume", data = open(Resume, 'rb').read(),file_name = "Resume.pdf",mime = "application/pdf"):
-      with st.spinner("Loading..."):
-       time.sleep(2)
-      st.success("Done!")
+
+   col1, col2 = st.columns(2)
+   with col1:
+      # LinkedIn
+      if st.button("LinkedIn"):
+         wb.open_new_tab(linkedin)
+      # Github
+      if st.button("Github"):
+         wb.open_new_tab(git)
+      # Gmail
+      if st.button("Gmail"):
+         st.write("itsofficial.eyashita10@gmail.com")
+      # Youtube
+      if st.button("Youtube"):
+         wb.open_new_tab(youtube)
+      # Resume
+      if st.download_button(label="Resume", data = open(Resume, 'rb').read(),file_name = "Resume.pdf",mime = "application/pdf"):
+         with st.spinner("Loading..."):
+            time.sleep(2)
+         st.success("Done!")
+   with col2:
+     st.image("https://media.giphy.com/media/htvPpsP0fEFhTv7HHT/giphy.gif", width = 100)
 
 
  
