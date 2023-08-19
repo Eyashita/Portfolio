@@ -27,7 +27,6 @@ sKart = Image.open("./Images/Shpping1.jpg")
 sKart = ImageOps.exif_transpose(sKart)
 dashboard = Image.open("./Images/Smart House.jpg")
 dashboard = ImageOps.exif_transpose(dashboard)
-linkedin = ImageOps.exif_transpose(Image.open("./Images/linkedin_icon.png"))
 faceRecog = ImageOps.exif_transpose(Image.open("./Images/FaceRecog.png"))
 
 linkedin = "https://www.linkedin.com/in/eyashita-singh"
@@ -208,7 +207,7 @@ if selected == 'Contact':
     <a href="https://www.youtube.com/@thesinghsisters813" class="fa fa-youtube"></a>
     <a href="https://www.instagram.com/colouralhaya/" class="fa fa-instagram"></a>
     <a href="https://join.skype.com/invite/xnGlxpbeSsRe" class="fa fa-skype"></a>
-    <a href="{git}" class="fa fa-github"></a>
+    <a href="https://github.com/Eyashita" class="fa fa-github"></a>
    '''
  
  left_col, right_col = st.columns([0.6, 0.4])
