@@ -78,7 +78,7 @@ if selected == 'About':
    with col2:
      st.markdown("""
     <div style="text-align: center; padding-top: 5rem"> <p style="font-size:120%;">
-        I'm a <b>DEDICATE</b> and <b>PASSIONATE</b> individual with a robust computer 
+        I'm a <b>DEDICATED</b> and a <b>PASSIONATE</b> individual with a robust computer 
         science &#x1F4BB; background and a deep fascination for data analytics. I possess 
         strong programming skills, a knack for problem-solving, and hands-on experience 
         with data analysis tools &#x1F6E0; . My goal is to leverage technology to drive meaningful 
@@ -116,7 +116,7 @@ if selected == 'Projects':
    st.write("""
                This is my internship project with IIT-Guwahati. I created a framework using python; Streamlit, html, css,etc. 
                to analyze real-time data from IoT sensors in smart homes. 
-               I was able gathered real-time data from diverse IoT sensors, managed MongoDB cloud database for data integrity, then 
+               I was able to gather real-time data from diverse IoT sensors, managed MongoDB cloud database for data integrity, then 
                developed an interactive dashboard using Streamlit for data analysis and visualization.
                The dashboard provided insights into occupancy, energy usage, and environment. Informed decision-making for efficiency 
                optimization and contributed to the advancement of IoT-enabled smart homes.
@@ -172,7 +172,7 @@ if selected == 'Projects':
             """)
  
 if selected == 'Contact':
- st.markdown("<h2 style='text-align:center;'>Get in Touch!</h2>", unsafe_allow_html=True)
+ st.markdown("<h2 style='text-align:center; font-size: 60px;'>Get in Touch!</h2>", unsafe_allow_html=True)
  st.write("---")
  st.write("##")
 
