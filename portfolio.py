@@ -21,7 +21,7 @@ local_css("./Style/style.css")
 
 lottie_coder = load_lottiurl("https://lottie.host/a9cd8673-69f7-4dba-bac3-2027423521fb/5gAswbWwF4.json")
 image = Image.open("./Images/Smart Mirror.jpg")
-me = ImageOps.exif_transpose(Image.open('./Images/Eyashita.JPG'))
+me = ImageOps.exif_transpose(Image.open('./Images/Eyashita4.png'))
 me = ImageOps.exif_transpose(me)
 sKart = Image.open("./Images/Shpping1.jpg")
 sKart = ImageOps.exif_transpose(sKart)
@@ -29,10 +29,14 @@ dashboard = Image.open("./Images/Smart House.jpg")
 dashboard = ImageOps.exif_transpose(dashboard)
 linkedin = ImageOps.exif_transpose(Image.open("./Images/linkedin_icon.png"))
 
+linkedin = "https://www.linkedin.com/in/eyashita-singh"
+git = "https://github.com/Eyashita"
+youtube = "https://www.youtube.com/@thesinghsisters813"
 
+Resume = "./Resume.pdf"
 
 # --- TITLE ---
-st.title("My Portfolio :ledger:")
+# st.title("My Portfolio :ledger:")
 st.markdown('''
             <style> 
             div.block-container
@@ -41,7 +45,6 @@ st.markdown('''
             }
            </style>'''
             , unsafe_allow_html = True)
-st.write('---')
 
 with st.container():
  selected = option_menu(
@@ -55,59 +58,53 @@ if selected == 'About':
  with st.container():
   col1, col2 = st.columns(2)
   with col1:
-   st.title("I am Eyashita Singh")
-   st.subheader("Undergrad at VIT AP")
-   st.markdown("""
-    <div style="text-align: justify;">
-        I'm a dedicated and passionate individual with a robust computer 
-        science background and a deep fascination for data analytics. I possess 
-        strong programming skills, a knack for problem-solving, and hands-on experience 
-        with data analysis tools. My goal is to leverage technology to drive meaningful 
-        change and innovation. I excel in teamwork, effective communication, and adapting to 
-        fast-paced environments. I'm eager to contribute my skills to your organization, 
-        whether it's through software development, data analysis, or driving data-driven decisions.
-        Let's connect and embark on an innovative journey together! :sparkles:
-    </div>
-    """, unsafe_allow_html=True)
-   
-  with col2:
+   st.markdown('''
+               <div>
+                  <h1 style="font-size:60px; text-align:center; padding-top: 3rem">Hi!&#128075;<br> I am Eyashita Singh </h1>
+               </div>
+               ''', unsafe_allow_html=True)
+   st.markdown('<h2 style="text-align: center;">Undergrad at VIT AP</h2>', unsafe_allow_html=True)
    st_lottie(lottie_coder)
+
+  with col2:
+   st.write("##")
+   st.write("##")
+   st.image(me)
  st.write("---")
 
  with st.container():
-  col3, col4 = st.columns(2)
-  with col3:
-   st.subheader("""
-            Education :books:
-            - Vellore Institue of Technology, Andhra Pradesh
-               - Bachelor of Engineering - Computer Science with Data Analytics Specialization
-               - CGPA: 8.89 (currently)
+   col1, col2 = st.columns([0.4, 0.6])
+   with col1:
+        st_lottie('https://lottie.host/f6e2bf10-592d-4aa5-b5bc-7d657d142a93/EpNeciup3K.json', width= 400)
+   with col2:
+     st.markdown("""
+    <div style="text-align: center; padding-top: 5rem"> <p style="font-size:120%;">
+        I'm a <b>DEDICATE</b> and <b>PASSIONATE</b> individual with a robust computer 
+        science &#x1F4BB; background and a deep fascination for data analytics. I possess 
+        strong programming skills, a knack for problem-solving, and hands-on experience 
+        with data analysis tools &#x1F6E0; . My goal is to leverage technology to drive meaningful 
+        change and innovation. I excel in teamwork &#x1F91D;, effective communication, and adapting to 
+        fast-paced environments. I'm eager to contribute my skills to your organization, 
+        whether it's through software development, data analysis, or driving data-driven decisions.
+        <br><br>Let's connect and embark on an innovative journey together!&#x2728;</p>
+    </div>
+    """, unsafe_allow_html=True)
+     
 
-            - St. Peter Senior Seconday School, Chandigarh
-               - 12th Grade: 92.1%
-                
-            - The Gurukul, Panchkula
-               - 10th: 93.8%
-               """
-            )
-  with col4:
-   st.subheader("""
-            Experience :computer:
-            - Do It Yourself (DIY) Club President, VIT-AP 
-               - Led a team of 10+ in organizing and executing art events, ensuring successful promotion and seamless coordination. 
-               - Partnered with more than 4 clubs and organizations to co-host and manage successful events. 
-              
-            - Senior Management Business Development, AIESEC 
-               - Conducted market research and implemented a sales strategy to increase AIESEC's market reach among 100+ students.
-               - Established and cultivated relationships with key stakeholders, fostering collaboration and support for AIESEC's goals.
-               - Facilitated in planning and executing AIESEC's annual fundraising event, 'Forge Your Career', which generated a revenue of around 10k+ through the event.
-               """)
+   st.markdown('''<h4> <i>Download my Resume here:</i></h4>''', unsafe_allow_html=True)
+   if st.download_button(label="Resume", data = open(Resume, 'rb').read(),file_name = "Resume.pdf",mime = "application/pdf"):
+      with st.spinner("Loading..."):
+         time.sleep(2)
+      st.success("Done!")
+
+
+
 
 if selected == 'Projects':
  with st.container():
   col1, col2 = st.columns([0.3, 0.7 ])
   with col1:
-   st.markdown("<h2 style='text-align: left ; padding-top:70px'>My Projects</h2>", unsafe_allow_html=True)
+   st.markdown("<h2 style='text-align: left ; font-size: 60px; padding-top:70px'>My Projects</h2>", unsafe_allow_html=True)
    with col2:
     st.image("https://media.giphy.com/media/5ndklThG9vUUdTmgMn/giphy.gif", width = 150)
   st.write("---")
@@ -118,9 +115,11 @@ if selected == 'Projects':
   with col6:
    st.subheader("	:arrow_right: IOT enabled Dynamic Dashboard for HouseHold Systems")
    st.write("""
-            - Developed a Smart Mirror using Raspberry Pi and Python, integrating 10+ technologies. 
-            - Improved morning routines by providing innovative features and easy access to information. 
-            - Enriched the advancement of smart home technology through this project. 
+               - Created a framework to analyze real-time data from IoT sensors in smart homes.
+               - Gathered real-time data from diverse IoT sensors.
+               -  Managed MongoDB cloud database for data integrity.
+               -  Developed an interactive dashboard using Streamlit for data analysis and visualization.
+               - Dashboard provided insights into occupancy, energy usage, and environment. Informed decision-making for efficiency optimization and contributed to the advancement of IoT-enabled smart homes.
             """)
    
   col7, col8 = st.columns([0.3, 0.7])
@@ -164,7 +163,7 @@ if selected == 'Contact':
  st.write("##")
 
  contact_form = """
-<form style="text-align: center;" action="https://formsubmit.co/eyashitasingh10@gmail.com" method="POST">
+<form style="text-align: center;" action="https://formsubmit.co/itsofficial.eyashita10@gmail.com" method="POST">
     <input type="hidden" name="_captcha" value="false">
     <input type="text" name="name" placeholder="Your name" style="width: 100%; padding: 10px; margin-bottom: 10px;" required>
     <input type="email" name="email" placeholder="Your email" style="width: 100%; padding: 10px; margin-bottom: 10px;" required>
@@ -183,39 +182,43 @@ if selected == 'Contact':
   st_lottie("https://lottie.host/825b4e78-a035-4d52-9fcb-4b34a214b80d/428IZ45rIj.json")
 
 
-# --- Sidebar ---
-linkedin = "https://www.linkedin.com/in/eyashita-singh/"
-git = "https://github.com/Eyashita"
-youtube = "https://www.youtube.com/@thesinghsisters813"
+# # --- Sidebar ---
+# with st.sidebar:
+#    # st.sidebar.title("Connect with me on Social Media!")
+#    st.markdown("<h1 style='margin-top: 0;padding-top: 0;'>Connect with me on Social Media!</h1>", unsafe_allow_html=True)
+#    st.write("---")
 
-Resume = "./Resume.pdf"
 
-with st.sidebar:
-   # st.sidebar.title("Connect with me on Social Media!")
-   st.markdown("<h1 style='margin-top: 0;padding-top: 0;'>Connect with me on Social Media!</h1>", unsafe_allow_html=True)
-   st.write("---")
+#    col1, col2 = st.columns(2)
+   
+#    with col1:
+#       # LinkedIn
+#       # Define the hyperlink text and URL
+#       button_text = "LinkedIn1"
+#       button_url = "https://www.linkedin.com/in/eyashita-singh"
 
-   col1, col2 = st.columns(2)
-   with col1:
-      # LinkedIn
-      if st.button("LinkedIn"):
-         wb.open_new_tab(linkedin)
-      # Github
-      if st.button("Github"):
-         wb.open_new_tab(git)
-      # Gmail
-      if st.button("Gmail"):
-         st.write("itsofficial.eyashita10@gmail.com")
-      # Youtube
-      if st.button("Youtube"):
-         wb.open_new_tab(youtube)
-      # Resume
-      if st.download_button(label="Resume", data = open(Resume, 'rb').read(),file_name = "Resume.pdf",mime = "application/pdf"):
-         with st.spinner("Loading..."):
-            time.sleep(2)
-         st.success("Done!")
-   with col2:
-     st.image("https://media.giphy.com/media/htvPpsP0fEFhTv7HHT/giphy.gif", width = 100)
+#    # Create a button that opens the link in a new tab
+#       if st.button(button_text):
+#          st.markdown(f'<script>window.open("{button_url}", "_blank");</script>', unsafe_allow_html=True)
+      
+#       if st.button("LinkedIn"):
+#        wb.open_new_tab(linkedin)
+#       # Github
+#       if st.button("Github"):
+#          wb.open_new_tab(git)
+#       # Gmail
+#       if st.button("Gmail"):
+#          st.write("itsofficial.eyashita10@gmail.com")
+#       # Youtube
+#       if st.button("Youtube"):
+#          wb.open_new_tab(youtube)
+#       # Resume
+#       if st.download_button(label="Resume", data = open(Resume, 'rb').read(),file_name = "Resume.pdf",mime = "application/pdf"):
+#          with st.spinner("Loading..."):
+#             time.sleep(2)
+#          st.success("Done!")
+#    with col2:
+#      st.image("https://media.giphy.com/media/htvPpsP0fEFhTv7HHT/giphy.gif", width = 100)
 
 
  
