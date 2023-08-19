@@ -28,6 +28,7 @@ sKart = ImageOps.exif_transpose(sKart)
 dashboard = Image.open("./Images/Smart House.jpg")
 dashboard = ImageOps.exif_transpose(dashboard)
 linkedin = ImageOps.exif_transpose(Image.open("./Images/linkedin_icon.png"))
+faceRecog = ImageOps.exif_transpose(Image.open("./Images/FaceRecog.png"))
 
 linkedin = "https://www.linkedin.com/in/eyashita-singh"
 git = "https://github.com/Eyashita"
@@ -67,7 +68,6 @@ if selected == 'About':
    st_lottie(lottie_coder)
 
   with col2:
-   st.write("##")
    st.write("##")
    st.image(me)
  st.write("---")
@@ -115,23 +115,31 @@ if selected == 'Projects':
   with col6:
    st.subheader("	:arrow_right: IOT enabled Dynamic Dashboard for HouseHold Systems")
    st.write("""
-               - Created a framework to analyze real-time data from IoT sensors in smart homes.
-               - Gathered real-time data from diverse IoT sensors.
-               -  Managed MongoDB cloud database for data integrity.
-               -  Developed an interactive dashboard using Streamlit for data analysis and visualization.
-               - Dashboard provided insights into occupancy, energy usage, and environment. Informed decision-making for efficiency optimization and contributed to the advancement of IoT-enabled smart homes.
+               This is my internship project with IIT-Guwahati. I created a framework using python; Streamlit, html, css,etc. 
+               to analyze real-time data from IoT sensors in smart homes. 
+               I was able gathered real-time data from diverse IoT sensors, managed MongoDB cloud database for data integrity, then 
+               developed an interactive dashboard using Streamlit for data analysis and visualization.
+               The dashboard provided insights into occupancy, energy usage, and environment. Informed decision-making for efficiency 
+               optimization and contributed to the advancement of IoT-enabled smart homes.
             """)
    
   col7, col8 = st.columns([0.3, 0.7])
   with col7:
-   st.image(dashboard, width = 300)
+   st.write("##")
+   st.image(faceRecog, width = 300)
   with col8:
    st.subheader("	:arrow_right: Visage: Facial Recognition System for Attendance")
    st.write("""
-            - Developed a Smart Mirror using Raspberry Pi and Python, integrating 10+ technologies. 
-            - Improved morning routines by providing innovative features and easy access to information. 
-            - Enriched the advancement of smart home technology through this project. 
-            """)
+            I created a Real-Time Face Recognition Attendance System using Python and advanced 
+            computer vision. The system automatically identifies students' faces in real-time, 
+            records attendance, and securely stores data in a database. It captures live video,
+            matches faces with unique digital "faceprints," and displays recognized students on 
+            a user-friendly interface. I prioritized data security with encryption and access controls.
+            The system underwent rigorous testing for accurate attendance recording. Additionally,
+            I developed a dashboard for students to track attendance and administrative access for 
+            easy student info retrieval. This project showcases my expertise in computer vision,
+             machine learning, database management, and user interface design, offering a streamlined 
+            and secure attendance management solution. """)
 
   col1, col2 = st.columns([0.3, 0.7])
   with col1:
@@ -141,20 +149,27 @@ if selected == 'Projects':
   with col2:
    st.subheader("	:arrow_right: Smart Mirror")
    st.write("""
-            - Developed a Smart Mirror using Raspberry Pi and Python, integrating 10+ technologies. 
-            - Improved morning routines by providing innovative features and easy access to information. 
-            - Enriched the advancement of smart home technology through this project. 
+            This was a team project where we built a sophisticated Smart Mirror utilizing Raspberry Pi and Python, 
+            seamlessly incorporating over 10 cutting-edge technologies. This innovative creation 
+            has significantly enhanced morning routines by offering novel features and streamlined 
+            access to vital information. By crafting this project, I have contributed to the evolution 
+            of smart home technology, presenting a remarkable and practical addition to the realm of 
+            intelligent living environments.
             """)
    
   col3, col4 = st.columns([0.3, 0.7])
   with col3:
    st.image(sKart, width = 300)
   with col4:
-   st.subheader("	:arrow_right: IOT enabled Smart ShoppingKart")
+   st.subheader("	:arrow_right: Smart ShoppingKart")
    st.write("""
-            - Developed a Smart Mirror using Raspberry Pi and Python, integrating 10+ technologies. 
-            - Improved morning routines by providing innovative features and easy access to information. 
-            - Enriched the advancement of smart home technology through this project. 
+            This project was also a team project where we developed an IoT-enabled smart cart using RFID technology, 
+            which interacts with items placed inside the cart. The cart features an RFID reader that scans RFID tags on items
+            and sends the data to a central database through an internet connection. We had also created a website that connects 
+            to this database and displays real-time information about the items in the cart, including their prices. 
+            An LCD screen on the cart displays the running total of the items as customers shop. This innovative solution offers 
+            efficient checkout, accurate inventory management, personalized offers, and valuable data insights. 
+            It showcases the potential of IoT technology to enhance traditional shopping experiences and streamline processes.
             """)
  
 if selected == 'Contact':
@@ -170,55 +185,41 @@ if selected == 'Contact':
     <textarea name="message" placeholder="Your message" style="width: 100%; height: 150px; padding: 10px;" required></textarea>
     <br><button type="submit">Submit</button></br>
 </form>
-
-
-
  """
+ contact_icons='''
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      .fa {
+            padding: 60px;
+            font-size: 50px;
+            width: 100px;
+            text-align: left;
+            text-decoration: none;
+            margin: 5px 2px;
+         }
 
+         .fa:hover {
+            opacity: 0.5;
+         }                  
+         
+    </style>
+    <a href= "https://www.linkedin.com/in/eyashita-singh" class="fa fa-linkedin"></a>
+    <a href="https://www.youtube.com/@thesinghsisters813" class="fa fa-youtube"></a>
+    <a href="https://www.instagram.com/colouralhaya/" class="fa fa-instagram"></a>
+    <a href="https://join.skype.com/invite/xnGlxpbeSsRe" class="fa fa-skype"></a>
+    <a href="{git}" class="fa fa-github"></a>
+   '''
+ 
  left_col, right_col = st.columns([0.6, 0.4])
  with left_col:
   st.markdown(contact_form, unsafe_allow_html= True)
+  st.write("##")
+  st.markdown(contact_icons, unsafe_allow_html=True)
  with right_col:
   st_lottie("https://lottie.host/825b4e78-a035-4d52-9fcb-4b34a214b80d/428IZ45rIj.json")
 
 
-# # --- Sidebar ---
-# with st.sidebar:
-#    # st.sidebar.title("Connect with me on Social Media!")
-#    st.markdown("<h1 style='margin-top: 0;padding-top: 0;'>Connect with me on Social Media!</h1>", unsafe_allow_html=True)
-#    st.write("---")
-
-
-#    col1, col2 = st.columns(2)
-   
-#    with col1:
-#       # LinkedIn
-#       # Define the hyperlink text and URL
-#       button_text = "LinkedIn1"
-#       button_url = "https://www.linkedin.com/in/eyashita-singh"
-
-#    # Create a button that opens the link in a new tab
-#       if st.button(button_text):
-#          st.markdown(f'<script>window.open("{button_url}", "_blank");</script>', unsafe_allow_html=True)
-      
-#       if st.button("LinkedIn"):
-#        wb.open_new_tab(linkedin)
-#       # Github
-#       if st.button("Github"):
-#          wb.open_new_tab(git)
-#       # Gmail
-#       if st.button("Gmail"):
-#          st.write("itsofficial.eyashita10@gmail.com")
-#       # Youtube
-#       if st.button("Youtube"):
-#          wb.open_new_tab(youtube)
-#       # Resume
-#       if st.download_button(label="Resume", data = open(Resume, 'rb').read(),file_name = "Resume.pdf",mime = "application/pdf"):
-#          with st.spinner("Loading..."):
-#             time.sleep(2)
-#          st.success("Done!")
-#    with col2:
-#      st.image("https://media.giphy.com/media/htvPpsP0fEFhTv7HHT/giphy.gif", width = 100)
 
 
  

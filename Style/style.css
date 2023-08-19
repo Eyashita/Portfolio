@@ -30,9 +30,9 @@ button[type=submit]:hover
     border-radius: 50%;
     overflow:hidden;
     }
-    .image{
-     width:100%;
-     float:left;
-     height:100%;
-     }
+.image{
+    width:100%;
+    float:left;
+    height:100%;
+    }
      
