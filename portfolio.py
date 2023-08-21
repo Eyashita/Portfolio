@@ -63,7 +63,7 @@ if selected == 'About':
                   <h1 style="font-size:60px; text-align:center; padding-top: 3rem">Hi!&#128075;<br> I am Eyashita Singh </h1>
                </div>
                ''', unsafe_allow_html=True)
-   st.markdown('<h2 style="text-align: center;">Undergrad at VIT AP</h2>', unsafe_allow_html=True)
+   st.markdown('<h2 style="text-align: center;">Undergrad at VIT</h2>', unsafe_allow_html=True)
    st_lottie(lottie_coder)
 
   with col2:
@@ -87,8 +87,7 @@ if selected == 'About':
         whether it's through software development, data analysis, or driving data-driven decisions.
         <br><br>Let's connect and embark on an innovative journey together!&#x2728;</p>
     </div>
-    """, unsafe_allow_html=True)
-     
+    """, unsafe_allow_html=True)   
 
    st.markdown('''<h4> <i>Download my Resume here:</i></h4>''', unsafe_allow_html=True)
    if st.download_button(label="Resume", data = open(Resume, 'rb').read(),file_name = "Resume.pdf",mime = "application/pdf"):
