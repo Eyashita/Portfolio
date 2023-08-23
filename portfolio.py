@@ -36,7 +36,6 @@ youtube = "https://www.youtube.com/@thesinghsisters813"
 Resume = "./Resume.pdf"
 
 # --- TITLE ---
-# st.title("My Portfolio :ledger:")
 st.markdown('''
             <style> 
             div.block-container
@@ -95,6 +94,10 @@ if selected == 'About':
          time.sleep(2)
       st.success("Done!")
 
+   st.markdown('''<h3> My Achievements <h3> ''', unsafe_allow_html=True)
+   st.markdown(''' 
+               1) Had won the BEST VOICE MODULATION Award for a Radio Jockey Competition in 3rd class.
+               ''')
 
 
 
