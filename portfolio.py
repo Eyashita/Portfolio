@@ -33,7 +33,7 @@ linkedin = "https://www.linkedin.com/in/eyashita-singh"
 git = "https://github.com/Eyashita"
 youtube = "https://www.youtube.com/@thesinghsisters813"
 
-Resume = "./Resume.pdf"
+Resume = "./Eyashita's Resume.pdf"
 
 # --- TITLE ---
 st.markdown('''
