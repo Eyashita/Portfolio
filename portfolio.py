@@ -33,7 +33,7 @@ linkedin = "https://www.linkedin.com/in/eyashita-singh"
 git = "https://github.com/Eyashita"
 youtube = "https://www.youtube.com/@thesinghsisters813"
 
-Resume = "./Eyashita's Resume.pdf"
+Resume = "./Eyashita_Resume.pdf"
 
 # --- TITLE ---
 st.markdown('''
@@ -94,11 +94,10 @@ if selected == 'About':
          time.sleep(2)
       st.success("Done!")
 
-   st.markdown('''<h3> My Achievements <h3> ''', unsafe_allow_html=True)
-   st.markdown(''' 
-               1) Had won the BEST VOICE MODULATION Award for a Radio Jockey Competition in 3rd class.
-               ''')
-
+   # st.markdown('''<h3> My Achievements <h3> ''', unsafe_allow_html=True)
+   # st.markdown(''' 
+   #             1) Had won the BEST VOICE MODULATION Award for a Radio Jockey Competition in 3rd class.
+   #             ''')
 
 
 if selected == 'Projects':
